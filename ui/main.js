@@ -6,7 +6,7 @@ element.innerHTML="New Value";
 
 //to move image
 var img=document.getElementById("madi");
-var marginLeft=0;
+//var marginLeft=0;
 //function moveRight(){
   // moveLeft=moveLeft+10;
    // img.style.moveLeft=moveLeft+'px';
