@@ -1,11 +1,11 @@
 console.log('Loaded!');
 
-var element=document.getElementById("main-text");
+var element=document.getElementById('main-text');
 
 element.innerHTML="New Value";
 
 //to move image
-var img=document.getElementById("madi");
+var img=document.getElementById('madi');
 //var marginLeft=0;
 //function moveRight(){
   // moveLeft=moveLeft+10;
@@ -15,4 +15,4 @@ var img=document.getElementById("madi");
 img.onClick=function(){
     //var interval=setInterval(moveRight,100);
     img.style.marginLeft='100px';
-}
+};
