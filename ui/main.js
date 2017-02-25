@@ -1,4 +1,4 @@
-console.log('Loaded!');
+/*console.log('Loaded!');
 
 var element=document.getElementById('main-text');
 
@@ -15,4 +15,6 @@ function moveRight(){
 img.onclick=function(){
     var interval=setInterval(moveRight,50);
     //img.style.marginLeft='100px';//to move image once
-};
+};*///module p5 code
+
+
