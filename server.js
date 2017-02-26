@@ -81,7 +81,7 @@ function createTemplate(data){
                           //Not done yet
                       }
                     };
-                    var nameInput=document.getElementById('name');
+                    var nameInput=document.getElementById('namea');
                     var name=nameInput.value;
                     //make the request
                     request.open('GET','http://anusha917.imad.hasura-app.io/submit-name?name=' +name,true);
