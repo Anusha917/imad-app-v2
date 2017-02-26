@@ -87,6 +87,8 @@ function createTemplate(data){
             <hr/>
             ${comment}
         </body>
+        <script type="text/javascript" src="/ui/main.js">
+        </script>
     </html>
     `;
     return htmlTemplate;
