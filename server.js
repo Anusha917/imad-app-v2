@@ -55,10 +55,9 @@ function createTemplate(data){
             <meta name="viewport" content="width=device-width,initial-scale=1"/>
              <link href="/ui/style.css" rel="stylesheet" />
              <script type="text/javascript">
-             var submit=document.getElementById('submit-btn');
+             var submit=document.getElementById('submit-btna');
                 submit.onclick=function(){
-                    //make a request to the server and send the name
-                    //make a request to counter endpoint
+                    //make a request
                     var request=new XMLHttpRequest();
                     
                     request.onreadystatechange=function(){
@@ -67,22 +66,21 @@ function createTemplate(data){
                           //take some action
                           if(request.status===200)
                           {
+                                var names=[];
                                 //capture a list of names and render it as a list
-                                var names=request.responseText;
+                                names=request.responseText;
                                 names=JSON.parse(names);
                                 var list='';
                                 for(var i=0;i<names.length;i++)
                                 {
                                    list += "<li>" +names[i]+ "</li>";
                                 }
-                                var ul=document.getElementById('namelist');
+                                var ul=document.getElementById('nameslist');
                                 ul.innerHTML=list;
                           }
                           //Not done yet
                       }
                     };
-                    var nameInput=document.getElementById('name');
-                    var name=nameInput.value;
                     //make the request
                     request.open('GET','http://anusha917.imad.hasura-app.io/:articleName,true);
                     request.send(null);
@@ -106,9 +104,9 @@ function createTemplate(data){
                 </div>
             </div>
             <hr/>
-            <input type="text" id="name" placeholder="name"></input>
-            <input type="submit" id="submit-btn" value="Submit"></input>
-            <ul id='namelist'>
+            <input type="text" id="namea" placeholder="name"></input>
+            <input type="submit" id="submit-btna" value="Submit"></input>
+            <ul id='nameslist'>
             </ul>
         </body>
     </html>
