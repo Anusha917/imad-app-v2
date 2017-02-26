@@ -18,7 +18,11 @@ var articles={
                                             </p>
                                             <p>
                                                 This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.
-                                            </p>`
+                                            </p>`,
+                                comment:`input type="text" id="name" placeholder="name"></input>
+                                        <input type="submit" id="submit-btn" value="Submit"></input>
+                                        <ul id='namelist'>
+                                        </ul>`
                             },
                 'article-two':{
                                 title:'Article-Two || Anusha Bandi',
@@ -29,7 +33,11 @@ var articles={
                                             </p>
                                             <p>
                                                 This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.
-                                            </p>`
+                                            </p>`,
+                                comment:`<input type="text" id="name" placeholder="name"></input>
+                                         <input type="submit" id="submit-btn" value="Submit"></input>
+                                         <ul id='namelist'>
+                                         </ul>`
                               },
                 'article-three':{
                                 title:'Article-Three || Anusha Bandi',
@@ -37,7 +45,11 @@ var articles={
                                 date:'feb 15,2017',
                                 content:`  <p>
                                                 This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.
-                                            </p>`
+                                            </p>`,
+                                comment:`<input type="text" id="name" placeholder="name"></input>
+                                        <input type="submit" id="submit-btn" value="Submit"></input>
+                                        <ul id='namelist'>
+                                        </ul>`
                 }
 };
 function createTemplate(data){
@@ -45,6 +57,7 @@ function createTemplate(data){
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
+    var comment=data.comment;
     
     var htmlTemplate=`
     <html>
@@ -71,6 +84,8 @@ function createTemplate(data){
                     ${content}
                 </div>
             </div>
+            <hr/>
+            ${comment}
         </body>
     </html>
     `;
