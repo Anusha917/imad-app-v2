@@ -78,7 +78,6 @@ function createTemplate(data){
             </ul>
              <script>
              var submit=document.getElementById('submit-btn');
-                window.onload=fuction(){
                 submit.onclick=function(){
                     //make a request
                     var request=new XMLHttpRequest();
@@ -109,7 +108,6 @@ function createTemplate(data){
                     //make the request
                     request.open('GET','http://anusha917.imad.hasura-app.io/submit-name?name=' +name,true);
                     request.send(null);
-                };
                 };
              </script>
         </body>
