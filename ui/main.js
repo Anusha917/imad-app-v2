@@ -22,10 +22,10 @@ img.onclick=function(){
 var button=document.getElementById('counter');
 button.onclick =function(){
     //make a request to counter endpoint
-    var request=new XMLHttprequest();
+    var request=new XMLHttpRequest();
     
     request.onreadystatechange=function(){
-      if(request.readyState==XMLHttprequest.DONE)
+      if(request.readyState==XMLHttpRequest.DONE)
       {
           //take some action
           if(request.status==200)
