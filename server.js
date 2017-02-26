@@ -18,11 +18,7 @@ var articles={
                                             </p>
                                             <p>
                                                 This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.
-                                            </p>`,
-                                comment:`<input type="text" id="name" placeholder="name"></input>
-                                        <input type="submit" id="submit-btn" value="Submit"></input>
-                                        <ul id='namelist'>
-                                        </ul>`
+                                            </p>`
                             },
                 'article-two':{
                                 title:'Article-Two || Anusha Bandi',
@@ -33,11 +29,7 @@ var articles={
                                             </p>
                                             <p>
                                                 This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.
-                                            </p>`,
-                                comment:`<input type="text" id="name" placeholder="name"></input>
-                                         <input type="submit" id="submit-btn" value="Submit"></input>
-                                         <ul id='namelist'>
-                                         </ul>`
+                                            </p>`
                               },
                 'article-three':{
                                 title:'Article-Three || Anusha Bandi',
@@ -45,11 +37,7 @@ var articles={
                                 date:'feb 15,2017',
                                 content:`  <p>
                                                 This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.
-                                            </p>`,
-                                comment:`<input type="text" id="name" placeholder="name"></input>
-                                        <input type="submit" id="submit-btn" value="Submit"></input>
-                                        <ul id='namelist'>
-                                        </ul>`
+                                            </p>`
                 }
 };
 function createTemplate(data){
@@ -57,7 +45,6 @@ function createTemplate(data){
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
-    var comment=data.comment;
     
     var htmlTemplate=`
     <html>
@@ -69,7 +56,6 @@ function createTemplate(data){
              <link href="/ui/style.css" rel="stylesheet" />
              <script>
              var submit=document.getElementById('submit-btn');
-                var submit=document.getElementById('submit-btn');
                 submit.onclick=function(){
                     //make a request to the server and send the name
                     //make a request to counter endpoint
@@ -100,10 +86,7 @@ function createTemplate(data){
                     //make the request
                     request.open('GET','http://anusha917.imad.hasura-app.io/submit-name?name=' +name,true);
                     request.send(null);
-                
                 };
-
-
              </script>
         </head>
         <body>
@@ -123,7 +106,10 @@ function createTemplate(data){
                 </div>
             </div>
             <hr/>
-            ${comment}
+            <input type="text" id="name" placeholder="name"></input>
+            <input type="submit" id="submit-btn" value="Submit"></input>
+            <ul id='namelist'>
+            </ul>
         </body>
     </html>
     `;
