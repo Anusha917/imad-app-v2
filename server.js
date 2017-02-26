@@ -19,7 +19,7 @@ var articles={
                                             <p>
                                                 This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.This is the content of article-one.
                                             </p>`,
-                                comment:`input type="text" id="name" placeholder="name"></input>
+                                comment:`<input type="text" id="name" placeholder="name"></input>
                                         <input type="submit" id="submit-btn" value="Submit"></input>
                                         <ul id='namelist'>
                                         </ul>`
