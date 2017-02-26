@@ -77,7 +77,7 @@ function createTemplate(data){
             <ul id='nameslist'>
             </ul>
              <script>
-             var submit=document.getElementById('submit-btn');
+             var submit=document.getElementById('submit-btna');
                 submit.onclick=function(){
                     //make a request
                     var request=new XMLHttpRequest();
