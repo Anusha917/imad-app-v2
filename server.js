@@ -55,7 +55,7 @@ function createTemplate(data){
             <meta name="viewport" content="width=device-width,initial-scale=1"/>
              <link href="/ui/style.css" rel="stylesheet" />
              <script type="text/javascript">
-             var submit=document.getElementById('submit-btna');
+             var submit=document.getElementById('submit-btn');
                 submit.onclick=function(){
                     //make a request
                     var request=new XMLHttpRequest();
@@ -86,7 +86,7 @@ function createTemplate(data){
                     //make the request
                     request.open('GET','http://anusha917.imad.hasura-app.io/submit-name?name=' +name,true);
                     request.send(null);
-                };
+                    };
              </script>
         </head>
         <body>
