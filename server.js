@@ -67,6 +67,44 @@ function createTemplate(data){
             </title>
             <meta name="viewport" content="width=device-width,initial-scale=1"/>
              <link href="/ui/style.css" rel="stylesheet" />
+             <script>
+             var submit=document.getElementById('submit-btn');
+                var submit=document.getElementById('submit-btn');
+                submit.onclick=function(){
+                    //make a request to the server and send the name
+                    //make a request to counter endpoint
+                    var request=new XMLHttpRequest();
+                    
+                    request.onreadystatechange=function(){
+                      if(request.readyState===XMLHttpRequest.DONE)
+                      {
+                          //take some action
+                          if(request.status===200)
+                          {
+                                //capture a list of names and render it as a list
+                                var names=request.responseText;
+                                names=JSON.parse(names);
+                                var list='';
+                                for(var i=0;i<names.length;i++)
+                                {
+                                   list += "<li>" +names[i]+ "</li>";
+                                }
+                                var ul=document.getElementById('namelist');
+                                ul.innerHTML=list;
+                          }
+                          //Not done yet
+                      }
+                    };
+                    var nameInput=document.getElementById('name');
+                    var name=nameInput.value;
+                    //make the request
+                    request.open('GET','http://anusha917.imad.hasura-app.io/submit-name?name=' +name,true);
+                    request.send(null);
+                
+                };
+
+
+             </script>
         </head>
         <body>
             <div class="container">
@@ -87,8 +125,6 @@ function createTemplate(data){
             <hr/>
             ${comment}
         </body>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
     </html>
     `;
     return htmlTemplate;
