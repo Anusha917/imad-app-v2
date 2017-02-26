@@ -54,7 +54,7 @@ function createTemplate(data){
             </title>
             <meta name="viewport" content="width=device-width,initial-scale=1"/>
              <link href="/ui/style.css" rel="stylesheet" />
-             <script>
+             <script type="text/javascript">
              var submit=document.getElementById('submit-btn');
                 submit.onclick=function(){
                     //make a request to the server and send the name
