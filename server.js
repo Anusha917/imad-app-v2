@@ -81,8 +81,10 @@ function createTemplate(data){
                           //Not done yet
                       }
                     };
+                    var nameInput=document.getElementById('name');
+                    var name=nameInput.value;
                     //make the request
-                    request.open('GET','http://anusha917.imad.hasura-app.io/:articleName,true);
+                    request.open('GET','http://anusha917.imad.hasura-app.io/submit-name?name=' +name,true);
                     request.send(null);
                 };
              </script>
